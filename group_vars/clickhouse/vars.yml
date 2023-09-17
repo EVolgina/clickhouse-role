@@ -1,5 +1,5 @@
 # group_vars/clickhouse/vars.yml
-clickhouse_version: 22.12.2.25
+clickhouse_version: 23.4.6.25
 clickhouse_packages:
   - clickhouse-client 
   - clickhouse-server

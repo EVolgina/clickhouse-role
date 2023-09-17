@@ -1,4 +1,13 @@
-[clickhouse]
-51.250.0.142 ansible_ssh_private_key_file=/home/devops/.ssh/id_rsa
-[vector]
-158.160.122.115 ansible_ssh_private_key_file=/home/devops/.ssh/id_rsa
+---
+clickhouse:
+    hosts:
+      84.201.128.52:
+        ansible_ssh_private_key_file: /home/devops/.ssh/id_rsa
+vector:
+    hosts:
+      158.160.101.156:
+        ansible_ssh_private_key_file: /home/devops/.ssh/id_rsa
+lighthouse:
+    hosts:
+      158.160.118.75:
+        ansible_ssh_private_key_file: /home/devops/.ssh/id_rsa
