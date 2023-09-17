@@ -1,0 +1,13 @@
+# tempates/nginx.j2
+server {
+    listen 8888;
+    # server_name localhost;
+    server_name 158.160.118.75;
+
+    access_log /var/log/nginx/lighthouse-access.log;
+
+    location / {
+        root /lighthouse/;
+        index index.html;
+    }
+}
