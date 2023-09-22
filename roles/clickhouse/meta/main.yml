@@ -1,0 +1,38 @@
+galaxy_info:
+  role_name: clickhouse
+  namespace: elenavolgina
+  author: Elena Volgina
+  description: Role for installation and managing ClickHouse
+  company: lern netology
+
+  license: MIT
+  
+  min_ansible_version: 2.10
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+        - bionic
+        - xenial
+    - name: Debian
+      versions:
+        - bullseye
+        - buster
+        - stretch
+        - jessie
+    - name: RHEL
+      versions:
+        - 7
+        - 8
+    - name: Centos
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - clickhouse
+    - database
+    - sql
+
+dependencies: []
