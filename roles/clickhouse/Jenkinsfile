@@ -1,0 +1,26 @@
+pipeline {
+    agent {
+        label 'ansible'
+    }
+    stages {
+        stage('Get role') {
+            steps {
+                dir('roles/clickhouse') {
+                    git branch: 'main', credentialsId: 'git', url: 'https://github.com/EVolgina/clickhouse-role.git'
+                }
+            }
+        }
+        stage('Install molecule') {
+            steps {
+               sh 'pip3 install --upgrade "molecule==6.0.2" requests==2.26.0'
+    }
+}
+        stage('Test role') {
+            steps {
+               dir('/opt/jenkins_agent/workspace/role/roles/clickhouse') {
+                    sh 'molecule test -s default'
+                   }
+            }
+        }
+    }
+}
